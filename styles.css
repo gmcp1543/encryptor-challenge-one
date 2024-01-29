@@ -4,7 +4,8 @@
 }
 
 body {
-    background-color: #e5e5e5;
+    background: rgb(69,61,205);
+    background: linear-gradient(90deg, rgba(69,61,205,1) 0%, rgba(49,190,172,1) 35%, rgba(44,219,255,1) 100%);
     height: 100vh;
     margin: 0;
 }
@@ -20,30 +21,148 @@ body {
 #logo {
     font-family: 'Roboto Slab', serif;
     margin-top: 0;
+    margin-bottom: 20px;
 }
 
 #encryptor-container {
     display: flex;
-    height: calc(100% - 40px);
+    height: calc(100% - (20px * 2) - 20px);
 }
 
 #input-container {
-    width: calc(80% - 20px);
+    width: calc(70% - 20px);
     margin-top: 40px;
     margin-right: 20px;
 }
 
 #result-container {
     background-color: whitesmoke;
-    width: calc(20% - 10px);
+    width: calc(30% - 10px);
+    height: 80vh;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#result-container i {
+    display: block;
+    color: #2cdbff;
+}
+
+#not-result-panel {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#not-result-panel h2 {
+    margin-bottom: 10px;
+}
+
+#not-result-panel p {
+    margin-top: 5px;
+}
+
+#result-panel {
+    height: 100%;
+    font-size: 20px;
+}
+
+#result-text {
+    overflow-y: auto;
+    height: calc(100% - 60px - 10px);
 }
 
 #input-encryptor {
     width: 100%;
+    height: calc(75% - 4px);
     background-color: inherit;
-    border: none;
+    border: 1px solid white;
+    border-radius: 10px;
     outline: none;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 30px;
+    color: white;
     resize: none;
+    padding: 10px;
+}
+
+#input-encryptor::placeholder {
+    color:rgb(212, 212, 212);
+}
+
+#input-controlls {
+    height: 25%;
+}
+
+#input-messages {
+    color: #dadada;
+}
+
+#btn-controlls {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+#btn-controlls button {
+    width: 35%;
+    padding: 10px 15px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+    border: 1px solid #453dcd;
+    border-radius: 15px;
+    outline-style: none;
+    transition: background-color 1s, color .5s;
+}
+
+#btn-controlls button:first-child {
+    background-color: #453dcd;
+    color: white;
+}
+
+#btn-controlls button:hover {
+    background-color: #2e2a77;
+    color: white;
+}
+
+#copy-btn {
+    background-color: #453dcd;
+    display: block;
+    width: 100%;
+    height: 55px;
+    margin-top: 10px;
+    padding: 10px 15px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+    color: white;
+    border: 1px solid #453dcd;
+    border-radius: 15px;
+    outline-style: none;
+    transition: background-color 1s, color .5s;
+}
+
+#copy-btn:hover {
+    background-color: #2e2a77;
+}
+
+/* Scroll bar input encryptor*/
+#input-encryptor::-webkit-scrollbar {
+    width: 10px;
+}
+
+#input-encryptor::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 10px;
+}
+
+#input-encryptor::-webkit-scrollbar-thumb {
+    background-color: #888;
+}
+
+#input-encryptor::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
 }
