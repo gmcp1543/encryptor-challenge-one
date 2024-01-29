@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #e5e5e5;
+    height: 100vh;
+    margin: 0;
+}
+
+#page-container {
+    width: 1080px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 10px;
+}
+
+#logo {
+    font-family: 'Roboto Slab', serif;
+    margin-top: 0;
+}
+
+#encryptor-container {
+    display: flex;
+    height: calc(100% - 40px);
+}
+
+#input-container {
+    width: calc(80% - 20px);
+    margin-top: 40px;
+    margin-right: 20px;
+}
+
+#result-container {
+    background-color: whitesmoke;
+    width: calc(20% - 10px);
+}
+
+#input-encryptor {
+    width: 100%;
+    background-color: inherit;
+    border: none;
+    outline: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+    resize: none;
+}
