@@ -40,7 +40,8 @@ body {
     width: calc(30% - 10px);
     height: 80vh;
     border-radius: 10px;
-    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 #result-container i {
@@ -73,6 +74,8 @@ body {
 #result-text {
     overflow-y: auto;
     height: calc(100% - 60px - 10px);
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 #input-encryptor {
@@ -132,9 +135,11 @@ body {
 #copy-btn {
     background-color: #453dcd;
     display: block;
-    width: 100%;
+    width: calc(100% - 20px);
     height: 55px;
     margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
     padding: 10px 15px;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 30px;
@@ -150,19 +155,23 @@ body {
 }
 
 /* Scroll bar input encryptor*/
-#input-encryptor::-webkit-scrollbar {
-    width: 10px;
+.light-scrollbar::-webkit-scrollbar {
+    width: 8px;
+    
 }
 
-#input-encryptor::-webkit-scrollbar-track {
+.light-scrollbar::-webkit-scrollbar-track {
     background-color: #f1f1f1;
+    border-radius: 10px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.light-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #888;
     border-radius: 10px;
 }
 
-#input-encryptor::-webkit-scrollbar-thumb {
-    background-color: #888;
-}
-
-#input-encryptor::-webkit-scrollbar-thumb:hover {
+.light-scrollbar::-webkit-scrollbar-thumb:hover {
     background-color: #555;
 }
