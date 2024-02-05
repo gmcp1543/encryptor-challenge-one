@@ -3,43 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Encriptador Web</title>
+    <title>Online Encryptor</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/687bb8daa1.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div id="page-container">
+    <div id="main-container">
 
-        <h1 id="logo">Encriptador Web</h1>
+        <h1 id="logo">Online Encryptor</h1>
+        <h1 id="page-description">&ltEncrypt your messages&gt</h1>
 
         <div id="encryptor-container">
 
             <div id="input-container">
 
-                <textarea id="input-encryptor" class="light-scrollbar" name="input-encryptor" autofocus="true" placeholder="Ingresa tu texto aquí..."></textarea>
+                <textarea id="input-encryptor" class="light-scrollbar" name="input-encryptor" autofocus="true" placeholder="Write your message here..."></textarea>
 
                 <div id="input-controlls">
                     <div id="input-messages">
-                        <p><i class="fa-solid fa-circle-info"></i> Solo puedes escribir letras minúsculas y sin acento.</p>
+                        <p><i class="fa-solid fa-circle-info"></i> You can only write lowercase letters without accents.</p>
                     </div>
                     <div id="btn-controlls">
-                        <button>Encriptar</button>
-                        <button>Desencriptar</button>
+                        <button>Encrypt</button>
+                        <button>Desencrypt</button>
                     </div>
                 </div>
                 
             </div>
 
             <div id="result-container">
-                <div id="not-result-panel" style="display: none;">
+                <div id="not-result-panel">
                     <i class="fa-solid fa-barcode fa-7x"></i>
-                    <h2>Ningún mensaje fue encontrado</h2>
-                    <p>Ingresa el texto que deseas encriptar o desencriptar</p>
+                    <h2>No messages were found</h2>
+                    <p>Type your message to encrypt or desencrypt</p>
                 </div>
-                <div id="result-panel">
+                <div id="result-panel" style="display: none;">
                     <div id="result-text" class="light-scrollbar">
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi vel repellat dicta nulla. Autem minima hic, consequatur dolore dolorem iusto alias, laudantium aut velit mollitia, libero perferendis soluta. Non, porro.
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum libero quae, earum eos sapiente sequi nesciunt minus accusamus, distinctio aut quaerat commodi voluptatibus repudiandae impedit id magni incidunt perferendis. Dolor!
