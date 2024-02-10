@@ -15,22 +15,22 @@
 
         <div id="encryptor-container">
 
-            <div id="input-container" style="display: none;">
+            <div id="input-container">
 
                 <textarea id="input-encryptor" class="light-scrollbar" name="input-encryptor" autofocus="true" placeholder="Write your message here..."></textarea>
 
                 <div id="input-controlls">
                     <div id="input-messages">
-                        <p><i class="fa-solid fa-circle-info"></i> You can only write lowercase letters without accents.</p>
+                        <p><i class="fa-solid fa-circle-info"></i> <span id="error-message">You can only write lowercase letters without accents.</span></p>
                     </div>
                     <div class="btn-row">
-                        <div class="btn-col-12 btn-col-lg-6">
+                        <div class="btn-col-12 btn-col-md-4 btn-col-lg-6">
                             <button type="button" id="encrypt-btn" class="btn-page important">Encrypt</button>
                         </div>
-                        <div class="btn-col-6 btn-col-lg-3">
+                        <div class="btn-col-6 btn-col-md-4 btn-col-lg-6">
                             <button type="button" id="desencrypt-btn" class="btn-page">Desencrypt</button>
                         </div>
-                        <div class="btn-col-6 btn-col-lg-3">
+                        <div class="btn-col-6 btn-col-md-4 btn-col-lg-0">
                             <button type="button" id="open-result-btn" class="btn-page">Open result</button>
                         </div>
                     </div>
@@ -39,38 +39,25 @@
             </div>
 
             <div id="result-container">
-                <div id="not-result-panel" style="display: none;">
+                <div id="not-result-panel">
                     <i class="fa-solid fa-barcode fa-7x"></i>
                     <h2>No messages were found</h2>
-                    <p>Type your message to encrypt or desencrypt. Remember not add lowercase letters and accents.</p>
+                    <p>Type your message to encrypt or desencrypt. Remember only add lowercase letters and no accents.</p>
                     <div class="btn-row">
-                        <div class="btn-col-12">
-                            <button type="button" class="btn-page important">Go back</button>
+                        <div class="btn-col-12 btn-col-lg-0">
+                            <button type="button" class="btn-page important go-back-btn">Go back</button>
                         </div>
                     </div>
                 </div>
                 <div id="result-panel">
                     <h2>Your result</h2>
-                    <div id="result-text" class="light-scrollbar">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi vel repellat dicta nulla. Autem minima hic, consequatur dolore dolorem iusto alias, laudantium aut velit mollitia, libero perferendis soluta. Non, porro.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum libero quae, earum eos sapiente sequi nesciunt minus accusamus, distinctio aut quaerat commodi voluptatibus repudiandae impedit id magni incidunt perferendis. Dolor!
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi, saepe quo cupiditate voluptatum vel ullam, a exercitationem numquam aliquam ut atque esse ad fugiat possimus molestiae maiores, ipsa facere dicta?
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione mollitia eaque hic ab dolorum quod, ipsam nobis obcaecati illo ducimus quam? Esse id incidunt nobis at veritatis ea et culpa.
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi vel repellat dicta nulla. Autem minima hic, consequatur dolore dolorem iusto alias, laudantium aut velit mollitia, libero perferendis soluta. Non, porro.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum libero quae, earum eos sapiente sequi nesciunt minus accusamus, distinctio aut quaerat commodi voluptatibus repudiandae impedit id magni incidunt perferendis. Dolor!
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi, saepe quo cupiditate voluptatum vel ullam, a exercitationem numquam aliquam ut atque esse ad fugiat possimus molestiae maiores, ipsa facere dicta?
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione mollitia eaque hic ab dolorum quod, ipsam nobis obcaecati illo ducimus quam? Esse id incidunt nobis at veritatis ea et culpa.
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi vel repellat dicta nulla. Autem minima hic, consequatur dolore dolorem iusto alias, laudantium aut velit mollitia, libero perferendis soluta. Non, porro.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum libero quae, earum eos sapiente sequi nesciunt minus accusamus, distinctio aut quaerat commodi voluptatibus repudiandae impedit id magni incidunt perferendis. Dolor!
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi, saepe quo cupiditate voluptatum vel ullam, a exercitationem numquam aliquam ut atque esse ad fugiat possimus molestiae maiores, ipsa facere dicta?
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione mollitia eaque hic ab dolorum quod, ipsam nobis obcaecati illo ducimus quam? Esse id incidunt nobis at veritatis ea et culpa.
-                    </div>
+                    <div id="result-text" class="light-scrollbar"></div>
                     <div class="btn-row">
-                        <div class="btn-col-12 btn-col-md-7 btn-col-lg-6">
+                        <div class="btn-col-12 btn-col-md-7 btn-col-lg-12">
                             <button id="copy-btn" class="btn-page important">Copy</button>
                         </div>
-                        <div class="btn-col-12 btn-col-md-5 btn-col-lg-6">
-                            <button id="copy-btn" class="btn-page">Go back</button>
+                        <div class="btn-col-12 btn-col-md-5 btn-col-lg-0">
+                            <button id="copy-btn" class="btn-page go-back-btn">Go back</button>
                         </div>
                     </div>
                 </div>
@@ -79,5 +66,7 @@
         </div>
 
     </div>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
