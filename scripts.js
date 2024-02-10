@@ -10,6 +10,7 @@ const resultPanel = document.getElementById("result-panel");
 const openResultBtn = document.getElementById("open-result-btn");
 const goBackBtns = Array.from(document.getElementsByClassName("go-back-btn"));
 const encryptBtn = document.getElementById("encrypt-btn");
+const desencryptBtn = document.getElementById("desencrypt-btn");
 //Especial containers
 const inputEncryptor = document.getElementById("input-encryptor");
 const resultText = document.getElementById("result-text");
@@ -136,4 +137,59 @@ encryptBtn.addEventListener("click", () => {
 
     encryptBtn.removeAttribute("disabled");
     encryptBtn.innerText = "Encrypt"
+});
+
+desencryptBtn.addEventListener("click", () => {
+    let inputValue = inputEncryptor.value;
+    let encryptedValue = "";
+    const allowedWords = /^[a-z0-9\,\._ ]+$/;
+
+    inputValue = inputValue.trim();
+    encryptBtn.setAttribute("disabled", '');
+    encryptBtn.innerText = "Dencrypting..."
+
+    if (inputValue.length == 0) {
+        if (windowCurrentWidth < 1080) {
+            inputContainer.style.display = "none";
+            resultContainer.style.display = "flex";
+        }
+
+        resultPanel.style.display = "none";
+        notResultPanel.style.display = "flex";
+
+        encryptBtn.removeAttribute("disabled");
+        encryptBtn.innerText = "Desencrypt"
+
+        return false;
+    }
+    
+    if (!allowedWords.test(inputValue)) {
+        errorMsgContainer.style.color = "#dbc564"
+        errorMsgContainer.innerText = "Your message only should have lowercase letters and not accents.";
+
+        encryptBtn.removeAttribute("disabled");
+        encryptBtn.innerText = "Desencrypt"
+        return false;
+    }
+
+    inputValue = inputValue.replaceAll("ai", "a");
+    inputValue = inputValue.replaceAll("enter", "e");
+    inputValue = inputValue.replaceAll("imes", "i");
+    inputValue = inputValue.replaceAll("ober", "o");
+    inputValue = inputValue.replaceAll("ufat", "u");
+
+    encryptedValue = inputValue;
+
+    resultText.innerText = encryptedValue;
+
+    if (windowCurrentWidth < 1080) {
+        inputContainer.style.display = "none";
+        resultContainer.style.display = "flex";
+    }
+
+    notResultPanel.style.display = "none";
+    resultPanel.style.display = "flex";
+
+    encryptBtn.removeAttribute("disabled");
+    encryptBtn.innerText = "Desencrypt"
 });
