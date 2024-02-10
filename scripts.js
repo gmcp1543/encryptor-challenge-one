@@ -11,10 +11,16 @@ const openResultBtn = document.getElementById("open-result-btn");
 const goBackBtns = Array.from(document.getElementsByClassName("go-back-btn"));
 const encryptBtn = document.getElementById("encrypt-btn");
 const desencryptBtn = document.getElementById("desencrypt-btn");
+const copyBtn = document.getElementById("copy-btn");
 //Especial containers
 const inputEncryptor = document.getElementById("input-encryptor");
 const resultText = document.getElementById("result-text");
 const errorMsgContainer = document.getElementById("error-message");
+
+
+function copyResultText() {
+    
+}
 
 //Events
 openResultBtn.addEventListener("click", () => {
@@ -192,4 +198,13 @@ desencryptBtn.addEventListener("click", () => {
 
     encryptBtn.removeAttribute("disabled");
     encryptBtn.innerText = "Desencrypt"
+});
+
+copyBtn.addEventListener("click", async () => {
+    try {
+        await navigator.clipboard.writeText(resultText.innerText);
+        alert("You've copied the text");
+    } catch (error){
+        alert("An error has been found: " + error);
+    }
 });
