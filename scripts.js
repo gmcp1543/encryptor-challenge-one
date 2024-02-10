@@ -151,8 +151,8 @@ desencryptBtn.addEventListener("click", () => {
     const allowedWords = /^[a-z0-9\,\._ ]+$/;
 
     inputValue = inputValue.trim();
-    encryptBtn.setAttribute("disabled", '');
-    encryptBtn.innerText = "Dencrypting..."
+    desencryptBtn.setAttribute("disabled", '');
+    desencryptBtn.innerText = "Dencrypting..."
 
     if (inputValue.length == 0) {
         if (windowCurrentWidth < 1080) {
@@ -163,8 +163,8 @@ desencryptBtn.addEventListener("click", () => {
         resultPanel.style.display = "none";
         notResultPanel.style.display = "flex";
 
-        encryptBtn.removeAttribute("disabled");
-        encryptBtn.innerText = "Desencrypt"
+        desencryptBtn.removeAttribute("disabled");
+        desencryptBtn.innerText = "Desencrypt"
 
         return false;
     }
@@ -173,8 +173,8 @@ desencryptBtn.addEventListener("click", () => {
         errorMsgContainer.style.color = "#dbc564"
         errorMsgContainer.innerText = "Your message only should have lowercase letters and not accents.";
 
-        encryptBtn.removeAttribute("disabled");
-        encryptBtn.innerText = "Desencrypt"
+        desencryptBtn.removeAttribute("disabled");
+        desencryptBtn.innerText = "Desencrypt"
         return false;
     }
 
@@ -196,8 +196,8 @@ desencryptBtn.addEventListener("click", () => {
     notResultPanel.style.display = "none";
     resultPanel.style.display = "flex";
 
-    encryptBtn.removeAttribute("disabled");
-    encryptBtn.innerText = "Desencrypt"
+    desencryptBtn.removeAttribute("disabled");
+    desencryptBtn.innerText = "Desencrypt"
 });
 
 copyBtn.addEventListener("click", async () => {
