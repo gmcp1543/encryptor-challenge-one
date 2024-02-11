@@ -171,7 +171,7 @@ desencryptBtn.addEventListener("click", () => {
     
     if (!allowedWords.test(inputValue)) {
         errorMsgContainer.style.color = "#dbc564"
-        errorMsgContainer.innerText = "Your message only should have lowercase letters and not accents.";
+        errorMsgContainer.innerText = "Your message only should have lowercase letters and no special characters.";
 
         desencryptBtn.removeAttribute("disabled");
         desencryptBtn.innerText = "Desencrypt"
