@@ -1,5 +1,6 @@
 /*VARIABLES*/
 let windowCurrentWidth = window.innerWidth;
+const allowedWords = /^[a-z0-9\,\._\n ]+$/;
 //Containers
 const inputContainer = document.getElementById("input-container");
 const resultContainer = document.getElementById("result-container");
@@ -78,7 +79,6 @@ window.addEventListener("resize", () => {
 encryptBtn.addEventListener("click", () => {
     let inputValue = inputEncryptor.value;
     let encryptedValue = "";
-    const allowedWords = /^[a-z0-9\,\._ ]+$/;
 
     inputValue = inputValue.trim();
     encryptBtn.setAttribute("disabled", '');
@@ -148,7 +148,6 @@ encryptBtn.addEventListener("click", () => {
 decryptBtn.addEventListener("click", () => {
     let inputValue = inputEncryptor.value;
     let encryptedValue = "";
-    const allowedWords = /^[a-z0-9\,\._ ]+$/;
 
     inputValue = inputValue.trim();
     decryptBtn.setAttribute("disabled", '');
