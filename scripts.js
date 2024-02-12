@@ -10,7 +10,7 @@ const resultPanel = document.getElementById("result-panel");
 const openResultBtn = document.getElementById("open-result-btn");
 const goBackBtns = Array.from(document.getElementsByClassName("go-back-btn"));
 const encryptBtn = document.getElementById("encrypt-btn");
-const desencryptBtn = document.getElementById("desencrypt-btn");
+const decryptBtn = document.getElementById("decrypt-btn");
 const copyBtn = document.getElementById("copy-btn");
 //Especial containers
 const inputEncryptor = document.getElementById("input-encryptor");
@@ -145,14 +145,14 @@ encryptBtn.addEventListener("click", () => {
     encryptBtn.innerText = "Encrypt"
 });
 
-desencryptBtn.addEventListener("click", () => {
+decryptBtn.addEventListener("click", () => {
     let inputValue = inputEncryptor.value;
     let encryptedValue = "";
     const allowedWords = /^[a-z0-9\,\._ ]+$/;
 
     inputValue = inputValue.trim();
-    desencryptBtn.setAttribute("disabled", '');
-    desencryptBtn.innerText = "Dencrypting..."
+    decryptBtn.setAttribute("disabled", '');
+    decryptBtn.innerText = "Decrypting..."
 
     if (inputValue.length == 0) {
         if (windowCurrentWidth < 1080) {
@@ -163,8 +163,8 @@ desencryptBtn.addEventListener("click", () => {
         resultPanel.style.display = "none";
         notResultPanel.style.display = "flex";
 
-        desencryptBtn.removeAttribute("disabled");
-        desencryptBtn.innerText = "Desencrypt"
+        decryptBtn.removeAttribute("disabled");
+        decryptBtn.innerText = "Decrypt"
 
         return false;
     }
@@ -173,8 +173,8 @@ desencryptBtn.addEventListener("click", () => {
         errorMsgContainer.style.color = "#dbc564"
         errorMsgContainer.innerText = "Your message only should have lowercase letters and no special characters.";
 
-        desencryptBtn.removeAttribute("disabled");
-        desencryptBtn.innerText = "Desencrypt"
+        decryptBtn.removeAttribute("disabled");
+        decryptBtn.innerText = "Decrypt"
         return false;
     }
 
@@ -196,8 +196,8 @@ desencryptBtn.addEventListener("click", () => {
     notResultPanel.style.display = "none";
     resultPanel.style.display = "flex";
 
-    desencryptBtn.removeAttribute("disabled");
-    desencryptBtn.innerText = "Desencrypt"
+    decryptBtn.removeAttribute("disabled");
+    decryptBtn.innerText = "Decrypt"
 });
 
 copyBtn.addEventListener("click", async () => {
