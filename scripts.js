@@ -19,10 +19,6 @@ const resultText = document.getElementById("result-text");
 const errorMsgContainer = document.getElementById("error-message");
 
 
-function copyResultText() {
-    
-}
-
 //Events
 openResultBtn.addEventListener("click", () => {
     let inputValue = inputEncryptor.value;
@@ -147,7 +143,7 @@ encryptBtn.addEventListener("click", () => {
 
 decryptBtn.addEventListener("click", () => {
     let inputValue = inputEncryptor.value;
-    let encryptedValue = "";
+    let decryptedValue = "";
 
     inputValue = inputValue.trim();
     decryptBtn.setAttribute("disabled", '');
@@ -183,9 +179,9 @@ decryptBtn.addEventListener("click", () => {
     inputValue = inputValue.replaceAll("ober", "o");
     inputValue = inputValue.replaceAll("ufat", "u");
 
-    encryptedValue = inputValue;
+    decryptedValue = inputValue;
 
-    resultText.innerText = encryptedValue;
+    resultText.innerText = decryptedValue;
 
     if (windowCurrentWidth < 1080) {
         inputContainer.style.display = "none";
